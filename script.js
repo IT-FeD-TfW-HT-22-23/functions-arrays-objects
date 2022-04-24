@@ -1,17 +1,16 @@
-/*
 // FUNCTIONS
 
 // a function is almost like a variable. But a variable holds a value and a function holds a piece of code
-// functions are the most simple form of a piece of code that we can reuse through our entire 
+// functions are the most simple form of a piece of code that we can reuse through our entire
 // applikation
 
 function logger() {
-    console.log("Lets learn about functions");
+  console.log("Lets learn about functions");
 }
 // first we define the function by using function and then name it
 // function logger() and then we put paretheses
-// after the () comes the function body 
-// the function body is defines by using {} 
+// after the () comes the function body
+// the function body is defines by using {}
 // so if we wanted to log this piece of code many times
 // instead of writing alot of console.logs... we just call the function
 
@@ -30,13 +29,13 @@ function logger() {
 function fruitProcessor(apples, oranges) {
   // so inside of () we can define parameters. Like what stuff we should put into ourmachine
   // in this case we want apple & orange juice returned to us, so we put apples and oranges in
-    const juice = `Juice with ${apples} apples and ${oranges} oranges`;
-    // then we define juice
-    // and this is important! the variable juice ONLY lives inside the fucntion body if
-    // we do not return it. We cannot reach it outside of the function body
-    return juice;
-    // we use the leyword return to return the value (juice in this case)
-    // if we dont use return the fucntion wont actually return anything
+  const juice = `Juice with ${apples} apples and ${oranges} oranges`;
+  // then we define juice
+  // and this is important! the variable juice ONLY lives inside the fucntion body if
+  // we do not return it. We cannot reach it outside of the function body
+  return juice;
+  // we use the leyword return to return the value (juice in this case)
+  // if we dont use return the fucntion wont actually return anything
 }
 
 fruitProcessor(3, 0);
@@ -56,8 +55,8 @@ console.log(appleJuice);
 // the value of the parameters are called argument
 
 function calcAge(age1, age2) {
-    const resAge = age1 + age2;
-    return resAge;
+  const resAge = age1 + age2;
+  return resAge;
 }
 
 console.log(calcAge(20, 10));
@@ -79,15 +78,13 @@ console.log(calcAge(20, 10));
 // DRY - do not repeat yourself! this goes for all programming languages
 
 // remember the built in function we used?
-const num = Number('23');
+const num = Number("23");
 console.log(num);
-
-
 
 // FUNCTION DECLARATION & EXPRESSION
 
 function calcAge(birthYear) {
-    return 2020 - birthYear;
+  return 2020 - birthYear;
 }
 // FUNCTION DECLARATION
 
@@ -97,8 +94,8 @@ console.log(myAge);
 // this is a function declaration the same as we used above
 
 const calcAge2 = function (birthYear) {
-    return 2020 - birthYear;
-}
+  return 2020 - birthYear;
+};
 // and this is a function expression
 
 const age2 = calcAge(1985);
@@ -114,30 +111,30 @@ console.log(age2);
 // this happens because of a process called hoisting - will not talk about now :)
 
 // which to use?
-// personal preference 
+// personal preference
 
 // ARRAYS
 
 // lets say we want to store our friends names in a variable so we can use them
 // later in our program
 
-const friend1 = 'Janne';
-const friend2 = 'Nisse';
-const friend3 = 'Sara';
+const friend1 = "Janne";
+const friend2 = "Nisse";
+const friend3 = "Sara";
 // doing this is repeating yourself and if we had like 50 friends
 // it would be soooo much code. So not a good practice
-// and we can actually store this in one place because of  data structures in js 
+// and we can actually store this in one place because of  data structures in js
 // array is a data structure
 // its like a big container where we can store data in case we have more than a single value
 // most important data structures are arrays and objects
 
-const friends = ['Janne', 'Nisse', 'Sara'];
+const friends = ["Janne", "Nisse", "Sara"];
 //console.log(friends);
 // storing all our friends into oine array is a much better approach
 
 //const years = new Array(1994, 1985, 2015, 2020);
 
-// array can hold any value and type 
+// array can hold any value and type
 // above is a different way of creating an array
 // we needed to use the new keyword
 // use the literal syntax with brackets - its way more common
@@ -147,7 +144,7 @@ const friends = ['Janne', 'Nisse', 'Sara'];
 // then we write 0 becuase arrays starts at 0. So the first element is always 0
 
 //console.log(friends[2]);
-// what do we get? 
+// what do we get?
 
 //console.log(friends.length);
 // this will give us the exact number of elements in the array more about length later
@@ -155,10 +152,9 @@ const friends = ['Janne', 'Nisse', 'Sara'];
 //console.log(friends[friends.length -1]);
 // this is very useful so we dont have to count all elements in the array imagine big data
 
-
 // we can mutate the array of we want to change something
 // lets say we are no longer friends with Nisse and we want to change that name
-friends[1] = 'Karin';
+friends[1] = "Karin";
 //console.log(friends);
 // and now Nisse is replaced with Karin
 // have a look at where it changes
@@ -168,17 +164,16 @@ friends[1] = 'Karin';
 // but we cannot replace the whole array like this
 //friends = ['Bob', 'Åke'];
 
-const firstName = 'Helena';
-const helena = [firstName, 'Johansson', 2020-1985, 'developer', friends];
+const firstName = "Helena";
+//const helena = [firstName, "Johansson", 2020 - 1985, "developer", friends];
 // an array can hold different values
 //console.log(helena);
 //console.log(helena.length);
 //console.log(helena[4]);
 
-
 const calcAge = function (birthYear) {
-    return 2020 - birthYear;
-}
+  return 2020 - birthYear;
+};
 // function to calculate age
 
 const yearOfBirth = [1999, 1985, 2020, 2016, 1978];
@@ -192,14 +187,14 @@ calcAge(yearOfBirth);
 // but we can do it with indiviual elements in the array
 const firstAge = calcAge(yearOfBirth[0]);
 const secondAge = calcAge(yearOfBirth[1]);
-const thirdAge = calcAge(yearOfBirth[yearOfBirth.length -1]);
+const thirdAge = calcAge(yearOfBirth[yearOfBirth.length - 1]);
 //console.log(firstAge, secondAge, thirdAge);
 
 // JS has some built in functions that we can apply on arrays and these are called methods
 // think of them as array operations
 // there are countless array methods in js but we are going to learn the basic ones
 
-friends.push('Benny');
+friends.push("Benny");
 console.log(friends);
 // push adds an element to the last index of the array
 // push is a method which technically is a function
@@ -207,7 +202,7 @@ console.log(friends);
 // push is a function so it can also return something
 // the value it retuns is the length of the new array
 
-friends.unshift('Lena');
+friends.unshift("Lena");
 console.log(friends);
 // unshift adds an element in the beginning of the array
 // just like push method also returns the new length
@@ -225,21 +220,21 @@ console.log(friends);
 // we do not need an argument and it returns the element that was removed
 
 // very useful is indexOf which tells us what position an element is located at
-console.log(friends.indexOf('Janne'));
+console.log(friends.indexOf("Janne"));
 // if u do this for an element that is not there you wel get -1
-console.log(friends.indexOf('Helena'));
+console.log(friends.indexOf("Helena"));
 
 // ES6 feature includes
 // will return true if the element is in the array and false if not
-console.log(friends.includes('Janne'));
+console.log(friends.includes("Janne"));
 // this is testing with strict equality which means it does not do type coersion
 // so if we push a number into the array and then test if it includes the string '22'
 // it wont work it will return false
 // but if we test if it includes the number 22 it will return true
 // we can use the includes method to write conditions
 // like this
-if (friends.includes('Sara')) {
-    console.log('You have a friend caled Sara');
+if (friends.includes("Sara")) {
+  console.log("You have a friend caled Sara");
 }
 
 // OBJECTS
@@ -260,7 +255,7 @@ const helena = {
 // we can assign values to these properties
 // objects are one of the fundamentals things in javascript
 // this is the object literal syntax
-// just like array we use objects to group together properties that belong 
+// just like array we use objects to group together properties that belong
 // together. But with objetcs the order how we access them doesnt matter
 // in array it matters
 // so how do we get data from ab object?
@@ -286,8 +281,7 @@ const interestedIn = prompt(
 // we get undefined
 // and we get that when we try to access a prop that does not exist
 
-
-//console.log(helena[interestedIn]); 
+//console.log(helena[interestedIn]);
 // if we use bracket notation we can put any expression in there
 // js will now replace interestedin with the actual value so this will work
 // the expression in the brackets will get evaluated
@@ -297,19 +291,11 @@ const interestedIn = prompt(
 // we can use that to our advantage and log a custom sentence when a prop doesnt exist
 
 if (helena[interestedIn]) {
-    console.log(helena[interestedIn]);
+  console.log(helena[interestedIn]);
 } else {
-    console.log('Wrong request!');
+  console.log("Wrong request!");
 }
 // if the value exists ( the if condition) that code will be executed
 // if its not true then execute the else block
 // so instead of loggin undefined we log our custom sentence when a prop doesnt exist
 // so now we actually handled an error
-*/
-
-function setUrl() {
-    const git = "New url";
-    return git;
-}
-
-
